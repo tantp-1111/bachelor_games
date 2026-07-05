@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バチェラー式恋愛診断</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="container">
+        <!-- スタート画面 -->
+        <div id="start-screen" class="screen">
+            <h1>🌹バチェラー式恋愛診断🌹</h1>
+            <p>あなたは運命のローズを手に入れられますか？？</p>
+            <button onclick="startQuiz()">START</button>
+        </div>
+
+        <!-- 質問画面 -->
+        <div id="question-screen" class="screen hidden">
+            <h2 id="question-title">質問 1/5</h2>
+            <p id="question-text"></p>
+            <div class="choices">
+                <button id="choice1" onclick="selectAnswer(1)"></button>
+                <button id="choice2" onclick="selectAnswer(2)"></button>
+            </div>
+        </div>
+
+        <!-- ローディング画面 -->
+        <div id="loading-screen" class="screen hidden">
+            <div class="container">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p class="loading-text">結果は・・・🌹</p>
+                    <div class="loader">Loading</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" class="screen hidden">
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+            <div id="rose" class="small-img"></div>
+            <div class="buttons">
+                <button onclick="restartQuiz()">最初に戻る</button>
+                <button onclick="shareToX()">Xに投稿</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

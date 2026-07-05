@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.png'); /* 画像のパスを指定 */
+    background-size: cover; /* 画面全体にフィット */
+    background-position: center; /* 中央配置 */
+    background-repeat: no-repeat; /* 繰り返しなし */
+    background-attachment: fixed; /* スクロールしても固定 */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* パーティクルにマウスイベントが当たらないように */
+    z-index: 0; /* 背景に置く */
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Canvas の上に表示 */
+}
+
+.screen {
+    background: #fbf0dc;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #fbf0dcdc;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    color: #013440;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #f2958d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #b02a5b;
+    transform: translateY(-2px);
+}
+
+.choices button {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.small-img img {
+  width: 200px;
+  height: auto;
+}
